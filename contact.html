@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact
+{% endblock title %}
+
+{% block body %}
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="http://source.unsplash.com/1280x720/?phone" class="d-block w-100" alt="...">
+            <div class="carousel-caption d-none d-md-block">
+                <h2>Phone - 2445980</h2>
+                <h2>email- contactus@rakshapizza.com </h2>
+                <p>Please provide your feedback</p>
+      </div>
+  </div>
+  <form method="post" action="/contact">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="Name" class="form-label">Name</label>
+      <input type="text" class="form-control" id=""Name" Name=Name aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Example Raksha</div>
+    </div>
+    <div class="mb-3">
+      <label for="Phone Number" class="form-label">Phone Number</label>
+      <input type="text" class="form-control" id=""Phone Number" Name=Phone Number aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Example 2445980</div>
+    </div>
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label">Email address</label>
+      <input type="email" class="form-control" id="Email address" Name=Email address aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Example contactus@rakshapizza.com</div>
+    </div>
+    <div class="mb-3">
+      <label for="Desc" class="form-label">Desc</label>
+      <input type="text" class="form-control" id=""Desc" Name=Desc aria-describedby="emailHelp">
+      <div id="emailHelp" class="form-text">Please write why you want to contact us</div>
+    </div>
+    <div class="mb-3 form-check">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1">
+      <label class="form-check-label" for="exampleCheck1">Check me out</label>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+{% endblock body %}
+#Please write why you want to contact us</div>
